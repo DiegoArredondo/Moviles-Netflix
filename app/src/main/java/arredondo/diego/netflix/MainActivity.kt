@@ -24,7 +24,8 @@ class MainActivity : AppCompatActivity() {
 
         adaptador = AdaptadorPelicula(this, peliculas)
 
-        gridview.adapter = adaptador
+        gridviewPelis.adapter = adaptador
+        gridviewSeries.adapter = adaptador
     }
 
     fun cargarPeliculas(){

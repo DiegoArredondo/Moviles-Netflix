@@ -1,19 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="#000"
+    android:paddingVertical="15dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginLeft="20dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Peliculas"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#FFC107"
+            android:gravity="start"/>
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="5dp"
+            android:background="@drawable/fondo_amarillo_solid"
+            android:layout_weight="2"/>
+    </LinearLayout>
 
     <GridView
-        android:id="@+id/gridview"
+        android:id="@+id/gridviewPelis"
         android:numColumns="3"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-
+        android:layout_height="0dp"
+        android:layout_weight="3">
     </GridView>
 
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginRight="20dp">
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="5dp"
+            android:background="@drawable/fondo_amarillo_solid"
+            android:layout_weight="3"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Series"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#FFC107"
+            android:gravity="end"/>
+    </LinearLayout>
+    <GridView
+        android:id="@+id/gridviewSeries"
+        android:numColumns="3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3">
+    </GridView>
+</LinearLayout>
